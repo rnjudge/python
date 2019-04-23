@@ -7,14 +7,14 @@ import urllib2
 from bs4 import BeautifulSoup
 
 
-# Collect the site to be scraped from user invocation
+# Make sure there is a location zip code to check 
 argcheck = len(sys.argv) - 1
 if argcheck < 1:
         print "You must provide a zipcode to check"
         exit()
 elif argcheck > 1:
         print "There are too many zipcodes. Please only list one"
-        exit() # exit for now. 
+        exit() 
 	#TODO: collect info from terminal to re-enter only one zipcode instead of exiting
 else:
         zip = sys.argv[1]
