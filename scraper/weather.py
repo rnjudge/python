@@ -10,10 +10,10 @@ from bs4 import BeautifulSoup
 # Make sure there is a location zip code to check
 argcheck = len(sys.argv) - 1
 if argcheck < 1:
-    print "You must provide a zipcode to check"
+    print("You must provide a zipcode to check")
     exit()
 elif argcheck > 1:
-    print "There are too many zipcodes. Please only list one"
+    print("There are too many zipcodes. Please only list one")
     exit()
     # TODO: collect info from terminal to re-enter only one zipcode instead of exiting
 else:
@@ -43,4 +43,4 @@ city_banner = soup.find("div", attrs={"class": "locations-title"}).text
 location = city_banner.split(")")[0]
 time = soup.find("div", attrs={"class": "observation-timestamp"}).text
 
-print "The current weather in", location + ") at", time + " is", weather + " but feels like", feels
+print("The current weather in", location + ") at", time + " is", weather + " but feels like", feels)

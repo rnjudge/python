@@ -35,7 +35,7 @@ e_location=''.join(eList)
 try:
     page = urllib2.urlopen('https://www.google.com/maps/dir/'+s_location+e_location)
 except urllib2.HTTPError:
-    print "seems like there is an error with one of your locations"
+    print("seems like there is an error with one of your locations")
     exit()
 else:
     # soup contains the HTML of the page
@@ -45,4 +45,4 @@ else:
 commute_time = soup.find("div", attrs={"span": "section-directions-trip-duration"})
 
 #TODO this is returning 'None'
-print "The fastest route according to google is ",commute_time
+print("The fastest route according to google is ",commute_time)
